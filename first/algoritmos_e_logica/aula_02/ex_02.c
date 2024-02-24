@@ -2,7 +2,7 @@
 int main()
 {
     float comp, larg, peri, area;
-    printf("\nQual o comprimento do seu terreno?");
+    printf("\nQual o comprimento do seu terreno? ");
     scanf("%f", & comp);
     printf("\nQual a largura do seu terreno?");
     scanf("%f", & larg);
