@@ -6,7 +6,7 @@ int main()
     scanf("%f", & comp);
     printf("\nQual a largura do seu terreno?");
     scanf("%f", & larg);
-    peri = comp + larg;
+    peri = 2 * (comp + larg); // perimetro precisa fazer multiplicado
     area = comp * larg;
     printf("\nAqui está o perímetro do seu terreno: %2.f que possui area de: %2.f\n", peri, area);
 
