@@ -13,6 +13,6 @@ int main()
     printf("\nQuantas vendas esse funcionário fez esse mês? ");
     scanf("%d", & qtvendas);
     totalsalario = (fixosalario * 0.04) * qtvendas;
-    printf("\nO salário final é de: %2.f ", totalsalario);
+    printf("\nO salário final é de: %.2f ", totalsalario);
     return 0;
 }

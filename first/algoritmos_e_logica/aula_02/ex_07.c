@@ -10,7 +10,7 @@ int main()
     scanf("%d", & num);
     cen = (num / 100);
     dez = (num % 100) / 10;
-    uni = (num % 100) % 10;
+    uni = (num % 100) % 10; // pode ser resolvido com (num%10)
     printf("\nA decomposição do número fica: %d centenas, %d dezenas e %d unidades\n", cen, dez, uni);
     return 0;
 }

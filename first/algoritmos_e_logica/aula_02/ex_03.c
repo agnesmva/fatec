@@ -10,6 +10,6 @@ int main()
     printf("\nQual o preço desse tipo de sorvete por quilo?");
     scanf("%f", & pesoSorvete);
     valorSorvete = kgSoverte * pesoSorvete;
-    printf("\nO valor da compra é de %2.f", valorSorvete);
+    printf("\nO valor da compra é de %.2f", valorSorvete);
     return 0;
 }

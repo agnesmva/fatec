@@ -9,6 +9,6 @@ int main()
     printf("\nNossa loja está com promoção! Qual o preço do produto? ");
     scanf("%f", & valorproduto);
     valordesconto = valorproduto - ((valorproduto * 10) / 100); //em c não usamos a precedencia de (), {} e [] de prioridade da matemática
-    printf("\nO valor final do produto é: %2.f\n", valordesconto);
+    printf("\nO valor final do produto é: %.2f\n", valordesconto);
     return 0;
-}
+}   // pode ser feito com valordoproduto - (valordoproduto * 0.1)

@@ -9,6 +9,6 @@ int main()
     printf("\nQuantos reais você deseja converter para dólar? ");
     scanf("%f", & real);
     converter = real / cotacao;
-    printf("\nO valor da sua conversão é de: %2.f", converter);
+    printf("\nO valor da sua conversão é de: %.2f", converter);
     return 0;
 }
