@@ -4,12 +4,12 @@ escolhido pelo cliente, calcule e mostre o total a pagar. Para isto leia duas in
 quilo do sorvete e também a quantidade em quilogramas comprada pelo cliente.*/
 int main()
 {
-    float kgSoverte, priceSorvete, valorSorvete;
+    float kgSoverte, pesoSorvete, valorSorvete;
     printf("\nQual o peso do seu sorvete em quilos?");
     scanf("%f", & kgSoverte);
     printf("\nQual o preço desse tipo de sorvete por quilo?");
-    scanf("%f", & priceSorvete);
-    valorSorvete = kgSoverte * priceSorvete;
+    scanf("%f", & pesoSorvete);
+    valorSorvete = kgSoverte * pesoSorvete;
     printf("\nO valor da compra é de %2.f", valorSorvete);
     return 0;
 }
