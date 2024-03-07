@@ -17,13 +17,17 @@ int main ()
         printf("\nO primeiro é o maior: %d\n", num1);
     }
         
-    if ((num2 > num1) && (num2 > num3))
+    else if ((num2 > num1) && (num2 > num3))
     {
         printf("\nO segundo é o maior: %d\n", num2);
     }
-    if ((num3 > num1) && (num3 > num2))
+    else if ((num3 > num1) && (num3 > num2))
     {
         printf("\nO terceiro número é o maior: %d\n", num3);
+    }
+    else 
+    {
+        printf("\nalgo deu errado, tente novamente")
     }
     
     return   0;
