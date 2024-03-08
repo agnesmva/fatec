@@ -6,6 +6,7 @@ uma pessoa (‘F’ – feminino ou ‘M’ – masculino) e escreva-o por exten
 int main()
 {   char sexo;
     printf("\nQual seu sexo biológico? Digite F para fêmea, M para macho");
+    fflush(stdin); //limpa o buffer do teclado, importante usar é uma boa prática
     scanf("%c", & sexo);
     
     if (sexo == 'F') //tentei inicialmente com aspas duplas não funcionou
