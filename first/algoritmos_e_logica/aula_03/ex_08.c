@@ -15,18 +15,24 @@ int main()
     scanf("%f", & valorcompra);
     if (valorcompra >= 500.00)
     {
+        printf("\nO valor da sua compra é: %.2f", valorcompra);
+        printf("\nO valor do seu desconto é: 20%%");
         valorfinal = (valorcompra - (valorcompra * 0.2));
-        printf("\nQue legal! A sua compra final ficou em: %.2f", valorfinal);
+        printf("\nQue legal! A sua compra final ficou em: %.2f\n", valorfinal);
     }
     else if (valorcompra >= 200.00)
     {
+        printf("\nO valor da sua compra é: %.2f", valorcompra);
+        printf("\nO valor do seu desconto é: 15%%");
         valorfinal = (valorcompra - (valorcompra * 0.15));
-        printf("\nQue legal! A sua compra final ficou em: %.2f", valorfinal);
+        printf("\nQue legal! A sua compra final ficou em: %.2f\n", valorfinal);
     }
     else if (valorcompra < 200.00)
     {
+        printf("\nO valor da sua compra é: %.2f", valorcompra);
+        printf("\nO valor do seu desconto é: 10%%");
         valorfinal = (valorcompra -(valorcompra * 0.10) );
-        printf("\nQue legal! A sua compra final ficou em: %.2f", valorfinal);
+        printf("\nQue legal! A sua compra final ficou em: %.2f\n", valorfinal);
     }
     else 
     {

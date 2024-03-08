@@ -16,15 +16,33 @@ int main()
     {
         printf("\nVotar é proibido pois você só tem apenas %d anos", idade);
     }
-    if ((idade >=16) && (idade < 18) || (idade >= 65))
+    else if ((idade >=16) && (idade < 18) || (idade >= 65))
     {
         printf("\nVotar é facultativo, pois você tem %d anos\n", idade);
     }
-    if ((idade >= 18) &&(idade < 65))
+    else if ((idade >= 18) &&(idade < 65))
     {
         printf("\nVotar é obrigatório, pois você tem %d anos", idade);
+    }
+    else {
+        printf("Insira um valor válido");
     }
     
     
     return 0;
 }
+/*
+if (idade < 16)
+{
+    print ("\nVotar é proibido")
+}
+else 
+    if (idade > 18 && idade < 65)
+    {
+        print("\nVotar é obrigatório")
+    }
+    else
+    {
+        print("\nVotar é facultativo")
+    }
+*/

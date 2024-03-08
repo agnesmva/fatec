@@ -32,3 +32,38 @@ int main ()
     
     return   0;
 }
+// correção
+
+/*
+if((num1>num2) && (num1>num3))
+{
+    print("\nO maior valor é: %d", num1);
+}
+else 
+    if (num2>num3)
+    {
+        print("\nO maior valor é: %d", num2);
+    }
+    else 
+    {
+        print("\nO maior valor é: %d", num3);
+    }
+*/
+// segunda possibilidade
+/*
+int m;
+if((num1>num2) && (num1>num3))
+{
+    m = num1;
+}
+else 
+    if (num2>num3)
+    {
+         m = num2;
+    }
+    else 
+    {
+        m = num3;
+    }
+print("\nO maior número é: %d", m)
+*/

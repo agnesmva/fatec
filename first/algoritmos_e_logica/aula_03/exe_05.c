@@ -11,6 +11,7 @@ int main()
     char sexo;
     float peso, h;
     printf("\nQual seu sexo biológico? Digite F para fêmea, M para macho: ");
+    fflush(stdin);
     scanf("%c", & sexo);
     printf("\nQual a sua altura? ");
     scanf("%f", & h);
@@ -20,10 +21,14 @@ int main()
         peso = (72.7*h)-58;
         printf("\nSeu peso ideal é de: %.2f", peso);
     }
-    if (sexo == 'M')
+    else if  (sexo == 'M')
     {
         peso = (62.1*h)-44.7;
         printf("\nSeu peso ideal é de: %.2f", peso);
+    }
+    else
+    {
+        printf("Insira um valor válido");
     }
     return 0;
 }
