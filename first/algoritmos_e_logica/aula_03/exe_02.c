@@ -10,21 +10,22 @@ int main()
     printf("Digite o segundo número: ");
     scanf("%d", & num2);
 
-    if (num1!=num2)
+    if (num1==num2)
+    {
+        printf("Os números são iguais");
+    }
+    
+    else 
     {
             if (num1 > num2)
         {
             printf("O maior número é: %d", num1);
         }
-            if (num2 > num1)
+            else 
         {
             printf("O maior número é: %d", num2);
         }
-    }
-    
-    else 
-    {
-        printf("Os números são iguais");
+        
     }
     return   0;
 }
