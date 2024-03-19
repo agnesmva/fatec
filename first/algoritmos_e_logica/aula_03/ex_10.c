@@ -6,13 +6,13 @@ triângulo é equilátero, isósceles ou escaleno.
 #include <stdio.h>
 int main()
 {
-    int l1, l2, l3;
+    float l1, l2, l3;
     printf("\nQual  lado 1 do seu triângulo em cm?");
-    scanf("%d", & l1);
+    scanf("%f", & l1);
     printf("\nQual lado 2 do seu triângulo em cm?");
-    scanf("%d", & l2);
+    scanf("%f", & l2);
     printf("\nQual lado 3 do seu triângulo em cm?");
-    scanf("%d", & l3);
+    scanf("%f", & l3);
     if (((l1+l2)>l3) && ((l2+l3) > l1) && ((l3+l1) > l2))
     {
         if ((l1 == l2) && (l2 == l3))

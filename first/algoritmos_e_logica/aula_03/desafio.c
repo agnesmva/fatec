@@ -8,28 +8,37 @@ seleção.
 #include <stdio.h>
 int main()
 {
-    int a,b,c;
+    int a,b,c, t;
     printf("\nVamos colocar valores em ordem crescente? Insira o primeiro número ");
     scanf("%d", & a);
     printf("\nInsira o segundo número ");
     scanf("%d", & b);
     printf("\nInsira o segundo número ");
     scanf("%d", & c);
-    if ((b>a)&&(b>c))
+    if (a>b || a>c) 
     {
-        a=b, b=a, c=c;
-        printf("\nprimeiro:%d \n segundo:%d \nterceiro:%d", a,b,c);
-    }    
-    else if ( (a>c) && (a>b))
+        if(b>c)
     {
-        a=c, b=b, c=a;
-        printf("\nprimeiro:%d \n segundo:%d \nterceiro:%d", a,b,c);
+        t = a;
+        a = b;
+        b = t;
+
     }
-    else //n precisa haver troca
-    {
-        
-        printf("\nprimeiro:%d \n segundo:%d \nterceiro:%d", a,b,c);
+    else 
+        if (c>b)
+            {  
+                t = b;
+                b = c;
+                c = t;    
+            }
+        else{
+        t = a;
+        a = c;
+        c = t;
     }
+    }
+    
+    printf("\nprimeiro:%d \n segundo:%d \nterceiro:%d", a,b,c);
     
     return 0;
 

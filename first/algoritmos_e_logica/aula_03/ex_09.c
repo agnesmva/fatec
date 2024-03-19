@@ -16,35 +16,37 @@ int main()
     printf("\nQual a sua altura em metros?");
     scanf("%f", & alt);
     imc =  peso / (alt * alt);
-    if (imc < 18.5)
+    if (imc <= 18.5)
     {
         printf("Seu imc é de %.2f e você está abaixo do peso considerado ideal", imc);
     }
-    else if ((imc > 18.5) & (imc < 24.9))
-    {
-        printf("Seu imc é de %.2f e você está no peso considerado ideal", imc);
-    }
-    else if ((imc > 25) & (imc < 29.9))
-    {
-        printf("Seu imc é de %.2f e você está com sobrepeso", imc);
-    }
-    else if ((imc > 30) & (imc < 34.9))
-    {
-        printf("Seu imc é de %.2f e você está com Grau I de obesidade", imc);
-    }
-    else if ((imc > 35) & (imc < 39,9))
-    {
-        printf("Seu imc é de %.2f e você está com Grau II de obesidade", imc);
-    }
-    else if (imc > 40)
-    {
-        printf("Seu imc é de %.2f e você está com Grau II de obesidade", imc);
-    }
-    else 
-    {
-        printf("Digite um número válido");
-    }
-    
-    
+        else 
+            if (imc <= 24.9)
+            {
+                printf("Seu imc é de %.2f e você está no peso considerado ideal", imc);
+            }
+            else 
+                if  (imc <= 29.9)
+                {
+                    printf("Seu imc é de %.2f e você está com sobrepeso", imc);
+                }
+                else 
+                    if (imc <= 34.9)
+                    {
+                        printf("Seu imc é de %.2f e você está com Grau I de obesidade", imc);
+                    }
+                    else 
+                        if  (imc <= 39.9)
+                        {
+                            printf("Seu imc é de %.2f e você está com Grau II de obesidade", imc);
+                        }
+                        else 
+                            {
+                                printf("Seu imc é de %.2f e você está com Grau III de obesidade", imc);
+                            }
+                    
+        
     return 0;
 }
+// #include <math.h> x = pow(alt,2);
+// não precisa verificar duas vezes;

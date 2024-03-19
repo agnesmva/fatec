@@ -36,7 +36,7 @@ int main()
     }
     else 
     {
-        printf("\nInsira um valor válido");
+        printf("\nInsira um valor válido"); //o caso insira chart o programa é convertido para float retorna 0;
     }
     
     return 0;
