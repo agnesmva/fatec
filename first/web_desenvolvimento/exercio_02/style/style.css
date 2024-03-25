@@ -16,7 +16,7 @@ nav{
 nav ul{
     background-color: rgb(112, 70, 42);
     border-radius: 120px;
-    padding: 4em;
+    padding: 2em;
     list-style: none;
     display: flex;
     justify-content: space-between;
@@ -31,11 +31,34 @@ a:visited,
 a:link{
     color: bisque;
 }
-h1{
+main{
+    margin: 1em;
     text-align: center;
+}
+main p{
+    text-align: justify;
+}
+h1{
     font-family: "Concert One", sans-serif;
-    padding: 30px;
+    font-size: 3em;
     color: rgb(112, 70, 42);
     
 }
+aside h1{
+    font-family: "Montserrat", sans-serif;
+    font-size: 2em
+}
 
+aside section{
+    font-size: 0.4em;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    text-align: left;
+    background-color: coral;
+
+}
+footer{
+    display: flex;
+    justify-content: center;
+}
