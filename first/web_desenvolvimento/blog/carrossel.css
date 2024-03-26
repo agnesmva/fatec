@@ -1,0 +1,28 @@
+
+.carousel {
+    display: flex;
+    width: 80%;
+    margin: 0 auto;
+    overflow: hidden;
+  }
+  
+  .slide {
+    display: none;
+  }
+  
+  .slide img {
+    width: 300px;
+    height: auto;
+  }
+  
+
+  @keyframes slide {
+    0% {left: 0;}
+    100% {left: -100%;}
+  }
+  
+  .slide{
+    display: flex;
+    position: relative;
+    animation: slide 8s infinite;
+  }

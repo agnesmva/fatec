@@ -12,8 +12,6 @@ nav{
     display: flex;
     justify-content:space-between;
     align-items: center;
-
-
 }
 .menu{
     margin-right: 20px;
@@ -36,6 +34,9 @@ main header{
 }
 main{
     margin-bottom: 24px;
+}
+main{
+    text-align: center;
 }
 .gameslist{
 
@@ -73,9 +74,6 @@ footer{
     padding: 0.3em;
     border-radius: 15px;
     height: 4em;
-    width: 100%;
-    display: flex;
-    justify-content: center;
     text-align: center;
 }
 footer a{
