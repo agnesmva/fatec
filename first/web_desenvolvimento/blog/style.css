@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Concert+One&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Notable&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Concert+One&family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Notable&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
+*{
+    list-style: none;
+}
+body{
+    background-color: #f3dcb9;
+    color: #270e06;
+    font-family: "Notable", sans-serif;
+}
+nav{
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+
+
+}
+.menu{
+    margin-right: 20px;
+}
+.menu ul{
+    display: flex;
+
+}
+.menu li{
+    padding-right: 0.7em;
+}
+a{
+    color: #270e06;
+    text-decoration: none;
+}
+main header{
+    text-align: center;
+    background-color: #e77c24;
+    border-radius: 15px;
+}
+main{
+    margin-bottom: 24px;
+}
+.gameslist{
+
+    display: flex;
+    justify-content: center;
+   
+}
+.gameslist ul{
+
+    display: flex;
+}
+.gameslist li{
+    padding-right: 1em;
+    color: #270e06;
+}
+
+.containergame {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+.containergame img{
+    width: 400px;
+    height: 230px;
+}
+.containergame p{
+    font-family:"Fira Sans", sans-serif;
+    width: 650px;
+    text-align: justify;
+}
+
+footer{
+    font-family: "Fira Sans", sans-serif;
+    background-color: #e77c24;
+    padding: 0.3em;
+    border-radius: 15px;
+    height: 4em;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+footer a{
+    color: #e0eb7f;
+}
