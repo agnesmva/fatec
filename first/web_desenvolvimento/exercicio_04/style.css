@@ -1,0 +1,50 @@
+/* Navegação */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo{
+    background-color: rgb(176, 106, 241);
+    width: 200px;
+    display: flex;
+    justify-content: center;
+    margin-left: 10px;
+}
+.logo img {
+    width: 100px;
+}
+nav ul{
+    list-style: none;
+    display: flex;
+    
+}
+nav ul li{
+    margin-right: 10px;
+}
+nav a,  nav a:visited{
+    text-decoration: none;
+    color: black;
+}
+/* BreadCrumbs */
+/* Main */
+/* Aside */
+aside {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: auto;
+}
+aside img{
+    width: 200px;
+}
+
+/* Footer */
+footer{
+    display: flex;
+    justify-content: center;
+}
+footer a,  footer a:visited{
+    text-decoration: none;
+    color: black;
+}
