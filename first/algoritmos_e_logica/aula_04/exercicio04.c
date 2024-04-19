@@ -1,7 +1,7 @@
 #include <stdio.h>
 main ()
 {
- int num, algarismos;
+ int num, algarismos = 0; // precisa inicializar
 	
 	printf(" \n Insira um numero inteiro: ");
 	scanf("%d", &num);
