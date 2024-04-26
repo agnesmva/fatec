@@ -6,7 +6,6 @@ Elaborar um programa que, considerando como dados de entrada dois valores inteir
 #include <stdio.h>
 
 int main() {
-    int A, B, primeiro, segundo, qtA, qtB;
 
     printf("Digite o valor A: ");
     scanf("%d", &A);
@@ -18,7 +17,7 @@ int main() {
     if (primeiro < segundo) {
         printf("A não pode estar contido dentro de B, pois %d é menor que %d\n", A, B);
       } 
-    else if ((A == B))
+    else if (A == B)
     {
         printf("%d termina com %d\n", A, B);
     }
