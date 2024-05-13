@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="PT-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora Gorjeta</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <p>Desenvolvido para a disciplina de Desenvolvimento Web I</p>
+        </nav>
+    </header>
+    <main>
+        <h1>Calculadora Gorjeta</h1>
+        <form action="" class="formulario">
+            <label for="valorconta">
+                Digite o valor da conta: 
+                <input type="number" id="valorconta">
+            </label>
+            <label for="valorgorjeta">
+                Digite o valor da porcentagem da gorjeta:
+                <input type="number" id="valorgorjeta">
+            </label>
+            <button onclick="calcularGorjeta()" type="button">Calcular</button>
+        </form>
+        <p id="valorfinal"></p>
+    </main>
+    <footer>
+            <p>
+            Site desenvolvido por <a href="mailto:agnes.figueiredo@fatec.sp.gov.br">agnesmva</a> para a disciplina de Desenvolvimento Web I. Todos direitos reservados &copy;
+            </p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
