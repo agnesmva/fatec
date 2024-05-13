@@ -1,0 +1,36 @@
+body{
+    background-color: rgb(232, 233, 235);
+    color: #313638;
+}
+header nav ul{
+    display: flex;
+    flex-direction: row-reverse;
+    list-style: none;
+}
+header nav ul li{
+    padding-right: 10px;
+}
+main{
+    background-color: #E0DFD5;
+    padding: 2%;
+
+}
+.formulario{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.formulario button{
+    border: none;
+    background-color: #F06543;
+    align-self: center;
+    width: 80px;
+}
+.formulario button:hover{
+    background-color: #d4593a;
+}
+footer{
+    position: absolute;
+    margin: 40%;
+    text-align: center;
+}
