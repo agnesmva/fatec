@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Conversor de Unidades</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <p>Desenvolvido para a disciplina de Desenvolvimento Web I</p>
+        </nav>
+    </header>
+    <main>
+        <h1>Conversor de Unidades</h1>
+        <form action="" class="formulario">
+            <label for="inicial">
+                Digite o valor da conversão: 
+                <input type="number" id="inicial">
+            </label>
+            <label for="medida">
+                Selecione para qual medida deseja converter:
+                <select name="" id="medidas" class="selecao">
+                    <option value="c_f">Celsius para Fahrenheit</option>
+                    <option value="m_p">Metro para Polegadas</option>
+                    <option value="q_l">Quilograma para Libra</option>
+                    <option value="mc_l">Metro Cúbico para Litro</option>
+                </select>
+                    
+            </label>
+            <button onclick="calcular()" type="button">Calcular</button>
+        </form>
+        <p id="valorfinal"></p>
+    </main>
+    <footer>
+             <p>
+            Site desenvolvido por <a href="mailto:agnes.figueiredo@fatec.sp.gov.br">agnesmva</a> para a disciplina de Desenvolvimento Web I. Todos direitos reservados &copy;
+            </p>
+    </footer>
+<script src="script.js"></script>
+</body>
+</html>
