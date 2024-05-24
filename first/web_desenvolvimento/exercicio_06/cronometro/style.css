@@ -1,0 +1,44 @@
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(232, 233, 235);
+    color: #313638;
+}
+main{
+    margin-top: 5%;
+    background-color: #E0DFD5;
+    padding: 2%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+.containerH2{
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 35px;
+    
+}
+h2{
+    padding: 5%;
+}
+ button{
+    border: none;
+    background-color: #F06543;
+    align-self: center;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+}
+ button:hover{
+    background-color: #d4593a;
+}
+img{
+    width: 30px;
+}
+footer{
+    position: fixed;
+    bottom: 0;
+    text-align: center;
+}
