@@ -1,0 +1,8 @@
+
+.memorygame{
+    display: grid;
+    
+}
+.memorygame img:not(:first-child){
+    visibility: collapse;
+}
