@@ -21,10 +21,14 @@ document.addEventListener('DOMContentLoaded', function () {
         cell.addEventListener('drop', function(event) {
             event.preventDefault();
             const data = event.dataTransfer.getData('text');
+<<<<<<< HEAD
             console.log(data);
             console.log(this.textContent);
             if (this.textContent === '') {
                 console.log("Entrou no if");
+=======
+            if (this.textContent === "") {
+>>>>>>> 4a4378f8a724c2b7715d9ff9fbd0f396ab269540
                 this.textContent = data;
                 // Verifica se houve um vencedor após cada movimento
                 if (checkWinner()) {
