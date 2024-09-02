@@ -1,0 +1,7 @@
+SELECT LASTNAME, SALARY, BONUS
+FROM EMPLOYEE
+WHERE SEX LIKE 'M';
+
+/*
+Pattern Matching
+*/
