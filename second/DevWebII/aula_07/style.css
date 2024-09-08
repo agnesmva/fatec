@@ -1,0 +1,42 @@
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+header{
+    text-align: center;
+    padding: 20px;
+}
+main {
+    flex: 1; /* O main vai crescer e ocupar o espaço disponível */
+    background-color: rgb(245, 146, 215);
+}
+
+ul,li, p{
+    list-style: none;
+    text-decoration: none;
+    color: black;
+    margin-left: 5%;
+}
+a{
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+}
+form {
+    display: flex;
+    flex: 2;
+    
+}
+
+
+footer {
+    background-color: #f8f8f8; /* Exemplo de cor de fundo para o footer */
+    text-align: center;
+    padding: 10px;
+}
