@@ -179,7 +179,6 @@ int main()
         printf("\n9 - Inserir antes do NO");
 		printf("\n10 - Inserir de Forma Ordenada");
 		printf("\n0 - Sair do Programa");
-		
 		printf("\n\nDigite a opcao: ");
 		scanf("%d", &op);
 
@@ -208,6 +207,9 @@ int main()
     				getchar(); 
 					
 					break;
+					getchar();
+					getchar();
+					printf("Pressione qualquer tecla para continuar...");
 			
 			case 3: printf("\nDigite o valor a inserir:");
 			        scanf("%d", &val);
