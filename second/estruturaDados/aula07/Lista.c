@@ -177,8 +177,9 @@ int main()
         printf("\n7 - Remover um NO");
         printf("\n8 - Inserir depois de um NO");
         printf("\n9 - Inserir antes do NO");
+		printf("\n10 - Inserir de Forma Ordenada");
 		printf("\n0 - Sair do Programa");
-		getchar();
+		
 		printf("\n\nDigite a opcao: ");
 		scanf("%d", &op);
 
@@ -195,13 +196,17 @@ int main()
 			        Ins_Inicio(&Inicio , val);
 			        break;
 			        
-			case 2: if (Inicio==NULL)
+			case 2: if (Inicio==NULL){
 						printf("\nLista Vazia!\n");
+					}
 					else{
 						printf("\nLista:\n");
 						Imprime(Inicio);
-						
 					}
+					printf("Pressione Enter para continuar...");
+    				getchar(); 
+    				getchar(); 
+					
 					break;
 			
 			case 3: printf("\nDigite o valor a inserir:");
@@ -216,7 +221,7 @@ int main()
 					 	printf("\nFoi removido: %d\n", val);
 					}
 			   			
-			   		system("pause");
+			   		
 			   		break;
 			   		
 			case 5: if (Inicio==NULL)
@@ -227,7 +232,7 @@ int main()
 					 	printf("\nFoi removido: %d\n", val);
 					}
 			   			
-			   		system("pause");
+			   	
 			   		break;
 			   		
 			case 6: printf("\nDigite o valor a procurar: ");
@@ -235,11 +240,15 @@ int main()
 					
 					r = consultar(Inicio, val);
 					
-					if (r==NULL)
+					if (r==NULL){
 						printf("\nValor %d nao existe na lista!\n", val);
-					else
+					}	
+					else{
 						printf("\nValor encontrado: %d\n", r->info);
-						
+					}
+					printf("Pressione Enter para continuar...");
+    				getchar(); 
+    				getchar(); 
 					break;
 
             case 7: printf("\nDigite o valor a ser removido: ");
@@ -259,10 +268,11 @@ int main()
                         else{
                             Rem_meio(Inicio, r);
                             printf("Valor removido com sucesso!");
-                        }
-                        
-                        
+                        }  
                     }
+					printf("Pressione Enter para continuar...");
+    				getchar(); 
+    				getchar(); 
                     break;
 			
             case 8: printf("\n Inserir depois de um NO");
@@ -283,7 +293,9 @@ int main()
                             Ins_Depois(r, val);
                         }
                     }
-						
+					printf("Pressione Enter para continuar...");
+    				getchar(); 
+    				getchar(); 	
 					break;
             case 9: printf("\n Inserir antes de um NO");
                     printf("\nDigite o valor a procurar: ");
@@ -303,8 +315,18 @@ int main()
                             Ins_Antes(Inicio, r, val);
                         }
                     }
-						
+					printf("Pressione Enter para continuar...");
+    				getchar(); 
+    				getchar(); 	
 					break;
+			case 10: printf("\n Inserindo de maneira ordenada\n");
+					 if (Inicio == NULL){
+						Ins_Inicio(&Inicio, val);
+					 }
+					 else{
+						
+					 }
+					 break;
      
 		}
 		
