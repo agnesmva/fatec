@@ -21,6 +21,7 @@ select NOME, month(DATA_NASC) as 'Mês Niver' from FUNCIONARIO;
 -- f) Mostre os 50% primeiros pedidos cadastrados.
 select * from PEDIDO
 limit 2;
+
 -- g) Mostre a descrição, preço de custo e preço de venda arredondados para 1 casa decimal, de todos os produtos.
 select DESCRICAO, round(CUSTO, 1) as 'Custo Arredondado', round(VENDA, 1) as 'Venda Arredondada'
 from PRODUTO;
