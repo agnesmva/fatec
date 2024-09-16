@@ -1,3 +1,4 @@
+use Lista1;
 -- a) Exibir código, nome, salário e o salário com 30% de aumento para todos os funcionários.
 select FUNCIONARIO_ID, NOME, SALARIO, 
 SALARIO *1.3 as 'SALARIO 30%'
@@ -18,7 +19,8 @@ select * from CLIENTE limit 3;
 select NOME, month(DATA_NASC) as 'Mês Niver' from FUNCIONARIO;
 
 -- f) Mostre os 50% primeiros pedidos cadastrados.
-
+select * from PEDIDO
+limit 2;
 -- g) Mostre a descrição, preço de custo e preço de venda arredondados para 1 casa decimal, de todos os produtos.
 select DESCRICAO, round(CUSTO, 1) as 'Custo Arredondado', round(VENDA, 1) as 'Venda Arredondada'
 from PRODUTO;
