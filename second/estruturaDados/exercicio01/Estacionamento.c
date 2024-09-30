@@ -86,8 +86,6 @@ int main(){
         printf("1 - Vamos inserir um carro no estacionamento\n");
         printf("2 - Vamos remover um carro do estacionamento\n");
         printf("3 - Me mostre os carros na pilha\n");
-        printf("4 - Vamos inserir carros aleatórios\n");
-
         scanf("%d", &opcao);
 
         switch (opcao)
