@@ -1,0 +1,37 @@
+# ninja log v6
+2	43	1728015298998145566	/home/agnesmva/Documentos/New Folder/Teste/build/Desktop_Qt_6_7_3-Debug/CMakeFiles/cmake.verify_globs	f340113042c5425d
+44	52	1728015299040145128	Teste_autogen/timestamp	f9db658c9f58ab7
+44	52	1728015299040145128	Teste_autogen/mocs_compilation.cpp	f9db658c9f58ab7
+43	214	1728012531486951332	build.ninja	e8cfecc8a16d5996
+44	52	1728015299040145128	/home/agnesmva/Documentos/New Folder/Teste/build/Desktop_Qt_6_7_3-Debug/Teste_autogen/timestamp	f9db658c9f58ab7
+44	52	1728015299040145128	/home/agnesmva/Documentos/New Folder/Teste/build/Desktop_Qt_6_7_3-Debug/Teste_autogen/mocs_compilation.cpp	f9db658c9f58ab7
+308	2797	1728012531808955860	CMakeFiles/Teste.dir/Teste_autogen/mocs_compilation.cpp.o	b4b6feae93dc6008
+308	3465	1728012531808955860	CMakeFiles/Teste.dir/main.cpp.o	795945250298651c
+50	2137	1728015202219201215	CMakeFiles/Teste.dir/mainwindow.cpp.o	389a938b607cb5bb
+2137	2386	1728015204306177439	Teste	a5149633ae7b3612
+1	39	1728015411811021016	/home/agnesmva/Documentos/New Folder/Teste/build/Desktop_Qt_6_7_3-Debug/CMakeFiles/cmake.verify_globs	f340113042c5425d
+40	48	1728015411850020644	Teste_autogen/timestamp	f9db658c9f58ab7
+40	48	1728015411850020644	Teste_autogen/mocs_compilation.cpp	f9db658c9f58ab7
+40	48	1728015411850020644	/home/agnesmva/Documentos/New Folder/Teste/build/Desktop_Qt_6_7_3-Debug/Teste_autogen/timestamp	f9db658c9f58ab7
+40	48	1728015411850020644	/home/agnesmva/Documentos/New Folder/Teste/build/Desktop_Qt_6_7_3-Debug/Teste_autogen/mocs_compilation.cpp	f9db658c9f58ab7
+1	39	1728015438412770072	/home/agnesmva/Documentos/New Folder/Teste/build/Desktop_Qt_6_7_3-Debug/CMakeFiles/cmake.verify_globs	f340113042c5425d
+41	49	1728015438452769698	Teste_autogen/timestamp	f9db658c9f58ab7
+41	49	1728015438452769698	Teste_autogen/mocs_compilation.cpp	f9db658c9f58ab7
+41	49	1728015438452769698	/home/agnesmva/Documentos/New Folder/Teste/build/Desktop_Qt_6_7_3-Debug/Teste_autogen/timestamp	f9db658c9f58ab7
+41	49	1728015438452769698	/home/agnesmva/Documentos/New Folder/Teste/build/Desktop_Qt_6_7_3-Debug/Teste_autogen/mocs_compilation.cpp	f9db658c9f58ab7
+49	2399	1728015438460769624	CMakeFiles/Teste.dir/mainwindow.cpp.o	389a938b607cb5bb
+2399	2653	1728015440810747693	Teste	a5149633ae7b3612
+1	36	1728015529695944461	/home/agnesmva/Documentos/New Folder/Teste/build/Desktop_Qt_6_7_3-Debug/CMakeFiles/cmake.verify_globs	f340113042c5425d
+1	39	1728015718997376524	/home/agnesmva/Documentos/New Folder/Teste/build/Desktop_Qt_6_7_3-Debug/CMakeFiles/cmake.verify_globs	f340113042c5425d
+40	48	1728015719036376218	Teste_autogen/timestamp	f9db658c9f58ab7
+40	48	1728015719036376218	Teste_autogen/mocs_compilation.cpp	f9db658c9f58ab7
+40	48	1728015719036376218	/home/agnesmva/Documentos/New Folder/Teste/build/Desktop_Qt_6_7_3-Debug/Teste_autogen/timestamp	f9db658c9f58ab7
+40	48	1728015719036376218	/home/agnesmva/Documentos/New Folder/Teste/build/Desktop_Qt_6_7_3-Debug/Teste_autogen/mocs_compilation.cpp	f9db658c9f58ab7
+1	40	1728015763580030123	/home/agnesmva/Documentos/New Folder/Teste/build/Desktop_Qt_6_7_3-Debug/CMakeFiles/cmake.verify_globs	f340113042c5425d
+41	49	1728015763620029816	Teste_autogen/timestamp	f9db658c9f58ab7
+41	49	1728015763620029816	Teste_autogen/mocs_compilation.cpp	f9db658c9f58ab7
+41	49	1728015763620029816	/home/agnesmva/Documentos/New Folder/Teste/build/Desktop_Qt_6_7_3-Debug/Teste_autogen/timestamp	f9db658c9f58ab7
+41	49	1728015763620029816	/home/agnesmva/Documentos/New Folder/Teste/build/Desktop_Qt_6_7_3-Debug/Teste_autogen/mocs_compilation.cpp	f9db658c9f58ab7
+49	2405	1728015763628029754	CMakeFiles/Teste.dir/mainwindow.cpp.o	389a938b607cb5bb
+2405	2661	1728015765984011656	Teste	a5149633ae7b3612
+3	41	1728052236664939955	/home/agnesmva/Documentos/New Folder/Teste/build/Desktop_Qt_6_7_3-Debug/CMakeFiles/cmake.verify_globs	f340113042c5425d
