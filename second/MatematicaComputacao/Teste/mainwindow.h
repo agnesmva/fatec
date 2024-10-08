@@ -24,6 +24,8 @@ private slots:
 
     void on_pushButtonPrint_clicked();
 
+    void on_pushButtonCheckTest_2_clicked();
+
 private:
     Ui::MainWindow *ui;
 };

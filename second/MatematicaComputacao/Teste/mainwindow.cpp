@@ -31,22 +31,21 @@ MainWindow::~MainWindow()
 
 void MainWindow::on_pushButtonCheckTest_clicked()
 {
-    QString nomeAluno =ui->lineEditUsername->text();
-    QString nomeDisciplina = ui->comboBoxDiscipline->currentText();
+    // Obter os valores de entrada do primeiro semestre
     float notaN1P = ui->lineEdit_n1First->text().toFloat();
     float notaN2P = ui->lineEdit_n2First->text().toFloat();
-    float notaN1S = ui->lineEdit_n1Second->text().toFloat();
-    float notaN2S = ui->lineEdit_n2Second->text().toFloat();
 
-    float mediaP = (notaN1P + notaN2P)/2;
-    float mediaS = (notaN1S + notaN2S)/2;
+    // Calcular a média do primeiro semestre
+    float mediaP = (notaN1P + notaN2P) / 2;
 
-    if ((mediaP > 2 && mediaP < 6) || (mediaS > 2 && mediaP < 6)) {
+    // Verificar se a média do primeiro semestre está entre 2 e 6
+    if (mediaP >= 2 && mediaP < 6) {
         QDialog dialog(this);
-        dialog.setWindowTitle("Nota da Substitutiva");
+        dialog.setWindowTitle("Nota da Substitutiva - Primeiro Semestre");
 
-        // Criar um QLineEdit para a nota da substitutiva
+        // Criar um QLineEdit para a nota substitutiva
         QLineEdit *lineEditNotaSubstitutiva = new QLineEdit(&dialog);
+        lineEditNotaSubstitutiva->setPlaceholderText("Insira a nota da substitutiva");
 
         // Criar um layout para o diálogo
         QVBoxLayout *layout = new QVBoxLayout;
@@ -56,33 +55,51 @@ void MainWindow::on_pushButtonCheckTest_clicked()
         QDialogButtonBox *buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel);
         layout->addWidget(buttonBox);
 
-        // Conectar o sinal do botão Ok ao slot do diálogo
+        // Conectar os sinais dos botões Ok e Cancelar
         connect(buttonBox, &QDialogButtonBox::accepted, &dialog, &QDialog::accept);
         connect(buttonBox, &QDialogButtonBox::rejected, &dialog, &QDialog::reject);
 
         // Definir o layout do diálogo
         dialog.setLayout(layout);
 
-        // Executar o diálogo
+        // Executar o diálogo e pegar a nota da substitutiva
         if (dialog.exec() == QDialog::Accepted) {
-            // Obter a nota da substitutiva digitada
             float notaSubstitutiva = lineEditNotaSubstitutiva->text().toFloat();
 
-            // Verificar qual semestre o aluno escolheu
-
-
-            if (notaSubstitutiva > 10 || notaSubstitutiva > 10 || notaSubstitutiva > 10 || notaSubstitutiva > 10)
-                QMessageBox::warning(this, "Erro", "Impossível calcular substitutiva, digite um número válido");
-                notaSubstitutiva = 0;
+            // Verificar se a nota substitutiva é válida
+            if (notaSubstitutiva > 10 || notaSubstitutiva < 0) {
+                QMessageBox::warning(this, "Erro", "Impossível calcular substitutiva, digite um número válido entre 0 e 10.");
+                return;
             }
-    }else{
-        QMessageBox::warning(this, "Erro", "Impossível calcular substitutiva. Pois sua média é de não se encaixa nas regras");
+
+            // Substituir a menor nota (entre N1P e N2P) pela nota substitutiva se ela for maior
+            if (notaSubstitutiva > notaN1P && notaN1P <= notaN2P) {
+                // Substitui notaN1P pela substitutiva e atualiza o input
+                notaN1P = notaSubstitutiva;
+                ui->lineEdit_n1First->setText(QString::number(notaN1P));
+            } else if (notaSubstitutiva > notaN2P && notaN2P <= notaN1P) {
+                // Substitui notaN2P pela substitutiva e atualiza o input
+                notaN2P = notaSubstitutiva;
+                ui->lineEdit_n2First->setText(QString::number(notaN2P));
+            }
+
+            // Recalcular a média após a substituição
+            mediaP = (notaN1P + notaN2P) / 2;
+
+            // Exibir a nova média do primeiro semestre
+            QString resultado = QString("Nova média do Primeiro Semestre: %1").arg(mediaP);
+            QMessageBox::information(this, "Resultado", resultado);
+        }
+    } else {
+        // Exibir mensagem de erro se a média do primeiro semestre não estiver dentro das regras
+        QMessageBox::warning(this, "Erro", "Impossível calcular substitutiva. Sua média do primeiro semestre não se encaixa nas regras (entre 2 e 6).");
     }
- }
+}
 
 
 void MainWindow::on_pushButtonAddStudent_clicked()
 {
+    // Obter os valores de entrada
     QString nomeAluno = ui->lineEditUsername->text();
     QString nomeDisciplina = ui->comboBoxDiscipline->currentText();
     float notaN1P = ui->lineEdit_n1First->text().toFloat();
@@ -90,7 +107,13 @@ void MainWindow::on_pushButtonAddStudent_clicked()
     float notaN1S = ui->lineEdit_n1Second->text().toFloat();
     float notaN2S = ui->lineEdit_n2Second->text().toFloat();
 
-    // Create a new student node
+    // Verificar se o nome do aluno e a disciplina estão preenchidos
+    if (nomeAluno.isEmpty() || nomeDisciplina.isEmpty()) {
+        QMessageBox::warning(this, "Erro", "Não foi possível cadastrar o aluno. Verifique se todos os campos estão preenchidos corretamente.");
+        return;
+    }
+
+    // Criar um novo nó do aluno
     Student* newNode = new Student;
     newNode->nomeAluno = nomeAluno;
     newNode->nomeDisciplina = nomeDisciplina;
@@ -100,7 +123,7 @@ void MainWindow::on_pushButtonAddStudent_clicked()
     newNode->notaN2S = notaN2S;
     newNode->next = nullptr;
 
-    // Add the new node to the linked list
+    // Adicionar o novo nó à lista encadeada
     if (head == nullptr) {
         head = newNode;
     } else {
@@ -110,60 +133,149 @@ void MainWindow::on_pushButtonAddStudent_clicked()
         }
         current->next = newNode;
     }
+
+    // Exibir mensagem de sucesso ao cadastrar o aluno
+    QMessageBox::information(this, "Sucesso", "Aluno cadastrado com sucesso!");
+
+    // Limpar os campos de entrada de texto após o cadastro
+    ui->lineEditUsername->clear();
+    ui->lineEdit_n1First->clear();
+    ui->lineEdit_n2First->clear();
+    ui->lineEdit_n1Second->clear();
+    ui->lineEdit_n2Second->clear();
+    ui->comboBoxDiscipline->setCurrentIndex(0);  // Opcional: redefinir a seleção da disciplina para o primeiro item
 }
 
 
-void MainWindow::on_pushButtonPrint_clicked(){
+
+
+void MainWindow::on_pushButtonPrint_clicked() {
     QFileDialog fileDialog(this, "Salvar arquivo CSV", "", "CSV files (*.csv)");
     fileDialog.setAcceptMode(QFileDialog::AcceptSave);
     if (fileDialog.exec() == QDialog::Accepted) {
         QString filePath = fileDialog.selectedFiles().first();
-        // Create a file stream to write to the file
+        // Cria o arquivo para escrever
         QFile file(filePath);
         if (!file.open(QIODevice::WriteOnly | QIODevice::Text)) {
             QMessageBox::warning(this, "Erro", "Não foi possível criar o arquivo CSV");
             return;
         }
 
-        // Create a text stream to write to the file
+        // Cria o stream de texto para escrever no arquivo
         QTextStream stream(&file);
-    // Write the student list to the CSV file
-    Student* current = head;
-    while (current != nullptr) {
-        // Calculate the average
-        float mediaP = (current->notaN1P + current->notaN2P) / 2;
-        float mediaS = (current->notaN1S + current->notaN2S) / 2;
-        float media = (mediaP + mediaS) / 2;
 
-        // Check if the student did a substitution
-        float notaSubstitutiva = current->notaSubstitutiva;
-        if (notaSubstitutiva != 0) {
-            // Substitute the lowest grade
-            if (current->notaN1P < current->notaN2P) {
-                current->notaN1P = notaSubstitutiva;
-            } else {
-                current->notaN2P = notaSubstitutiva;
+        // Cabeçalho do CSV
+        stream << "Nome do Aluno" << "," << "Disciplina" << "," << "N1 1 Bimestre" << ","
+               << "N2 1 Bimestre" << "," << "Media 1 Bimestre" << ","
+               << "N1 2 Bimestre" << "," << "N2 2 Bimestre" << ","
+               << "Media 2 Bimestre" << "," << "Media Semestral" << "," << "Situação" << "\n";
+
+        // Itera sobre a lista de estudantes
+        Student* current = head;
+        while (current != nullptr) {
+            // Calcula a média do 1º e 2º bimestre
+            float mediaP = (current->notaN1P + current->notaN2P) / 2;
+            float mediaS = (current->notaN1S + current->notaN2S) / 2;
+            float mediaFinal = (mediaP + mediaS) / 2;
+
+            // Verifica se o aluno fez a prova substitutiva
+            if (current->notaSubstitutiva != 0) {
+                // Substitui a menor nota do primeiro bimestre
+                if (current->notaN1P < current->notaN2P) {
+                    current->notaN1P = current->notaSubstitutiva;
+                } else {
+                    current->notaN2P = current->notaSubstitutiva;
+                }
+                // Recalcula a média do 1º bimestre e a média final
+                mediaP = (current->notaN1P + current->notaN2P) / 2;
+                mediaFinal = (mediaP + mediaS) / 2;
             }
-            mediaP = (current->notaN1P + current->notaN2P) / 2;
-            media = (mediaP + mediaS) / 2;
+
+            // Determina a situação do aluno
+            QString situacao = (mediaFinal >= 6) ? "Aprovado" : "Reprovado";
+
+            // Escreve a linha do aluno no arquivo CSV
+            stream << current->nomeAluno << "," << current->nomeDisciplina << ","
+                   << current->notaN1P << "," << current->notaN2P << "," << mediaP << ","
+                   << current->notaN1S << "," << current->notaN2S << "," << mediaS << ","
+                   << mediaFinal << "," << situacao << "\n";
+
+            // Vai para o próximo aluno
+            current = current->next;
         }
 
-        // Check the student's situation
-        QString situacao;
-        if (media >= 6) {
-            situacao = "Aprovado";
-        } else {
-            situacao = "Reprovado";
-        }
-
-        // Write the student row to the CSV file
-        stream << current->nomeAluno << "," << current->nomeDisciplina << "," << current->notaN1P << "," << current->notaN2P << "," << current->notaN1S << "," << current->notaN2S << "," << notaSubstitutiva << "," << media << "," << situacao << "\n";
-
-        // Move to the next student
-        current = current->next;
+        // Fecha o arquivo
+        file.close();
     }
+}
 
-    // Close the file
-    file.close();
+
+void MainWindow::on_pushButtonCheckTest_2_clicked()
+{
+    // Obter os valores de entrada do segundo semestre
+    float notaN1S = ui->lineEdit_n1Second->text().toFloat();
+    float notaN2S = ui->lineEdit_n2Second->text().toFloat();
+
+    // Calcular a média do segundo semestre
+    float mediaS = (notaN1S + notaN2S) / 2;
+
+    // Verificar se a média do segundo semestre está entre 2 e 6
+    if (mediaS >= 2 && mediaS < 6) {
+        QDialog dialog(this);
+        dialog.setWindowTitle("Nota da Substitutiva - Segundo Semestre");
+
+        // Criar um QLineEdit para a nota substitutiva
+        QLineEdit *lineEditNotaSubstitutiva = new QLineEdit(&dialog);
+        lineEditNotaSubstitutiva->setPlaceholderText("Insira a nota da substitutiva");
+
+        // Criar um layout para o diálogo
+        QVBoxLayout *layout = new QVBoxLayout;
+        layout->addWidget(lineEditNotaSubstitutiva);
+
+        // Adicionar botões Ok e Cancelar
+        QDialogButtonBox *buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel);
+        layout->addWidget(buttonBox);
+
+        // Conectar os sinais dos botões Ok e Cancelar
+        connect(buttonBox, &QDialogButtonBox::accepted, &dialog, &QDialog::accept);
+        connect(buttonBox, &QDialogButtonBox::rejected, &dialog, &QDialog::reject);
+
+        // Definir o layout do diálogo
+        dialog.setLayout(layout);
+
+        // Executar o diálogo e pegar a nota da substitutiva
+        if (dialog.exec() == QDialog::Accepted) {
+            float notaSubstitutiva = lineEditNotaSubstitutiva->text().toFloat();
+
+            // Verificar se a nota substitutiva é válida
+            if (notaSubstitutiva > 10 || notaSubstitutiva < 0) {
+                QMessageBox::warning(this, "Erro", "Impossível calcular substitutiva, digite um número válido entre 0 e 10.");
+                return;
+            }
+
+            // Substituir a menor nota (entre N1S e N2S) pela nota substitutiva se ela for maior
+            if (notaSubstitutiva > notaN1S && notaN1S <= notaN2S) {
+                // Substitui notaN1S pela substitutiva e atualiza o input
+                notaN1S = notaSubstitutiva;
+                ui->lineEdit_n1Second->setText(QString::number(notaN1S));
+            } else if (notaSubstitutiva > notaN2S && notaN2S <= notaN1S) {
+                // Substitui notaN2S pela substitutiva e atualiza o input
+                notaN2S = notaSubstitutiva;
+                ui->lineEdit_n2Second->setText(QString::number(notaN2S));
+            }
+
+            // Recalcular a média após a substituição
+            mediaS = (notaN1S + notaN2S) / 2;
+
+            // Exibir a nova média do segundo semestre
+            QString resultado = QString("Nova média do Segundo Semestre: %1").arg(mediaS);
+            QMessageBox::information(this, "Resultado", resultado);
+        }
+    } else {
+        // Exibir mensagem de erro se a média do segundo semestre não estiver dentro das regras
+        QMessageBox::warning(this, "Erro", "Impossível calcular substitutiva. Sua média do segundo semestre não se encaixa nas regras (entre 2 e 6).");
+    }
 }
-}
+
+
+

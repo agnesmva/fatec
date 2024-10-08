@@ -43,6 +43,7 @@ public:
     QPushButton *pushButtonAddStudent;
     QLabel *label_4;
     QPushButton *pushButtonCheckTest;
+    QPushButton *pushButtonCheckTest_2;
     QMenuBar *menubar;
     QStatusBar *statusbar;
 
@@ -57,6 +58,9 @@ public:
         lineEditUsername->setObjectName("lineEditUsername");
         lineEditUsername->setGeometry(QRect(320, 60, 201, 30));
         comboBoxDiscipline = new QComboBox(centralwidget);
+        comboBoxDiscipline->addItem(QString());
+        comboBoxDiscipline->addItem(QString());
+        comboBoxDiscipline->addItem(QString());
         comboBoxDiscipline->addItem(QString());
         comboBoxDiscipline->addItem(QString());
         comboBoxDiscipline->addItem(QString());
@@ -97,16 +101,19 @@ public:
         label_3->setGeometry(QRect(480, 178, 71, 16));
         pushButtonPrint = new QPushButton(centralwidget);
         pushButtonPrint->setObjectName("pushButtonPrint");
-        pushButtonPrint->setGeometry(QRect(500, 350, 150, 40));
+        pushButtonPrint->setGeometry(QRect(400, 430, 150, 40));
         pushButtonAddStudent = new QPushButton(centralwidget);
         pushButtonAddStudent->setObjectName("pushButtonAddStudent");
-        pushButtonAddStudent->setGeometry(QRect(310, 350, 150, 40));
+        pushButtonAddStudent->setGeometry(QRect(210, 430, 150, 40));
         label_4 = new QLabel(centralwidget);
         label_4->setObjectName("label_4");
         label_4->setGeometry(QRect(160, 277, 53, 14));
         pushButtonCheckTest = new QPushButton(centralwidget);
         pushButtonCheckTest->setObjectName("pushButtonCheckTest");
-        pushButtonCheckTest->setGeometry(QRect(110, 350, 150, 40));
+        pushButtonCheckTest->setGeometry(QRect(160, 340, 150, 40));
+        pushButtonCheckTest_2 = new QPushButton(centralwidget);
+        pushButtonCheckTest_2->setObjectName("pushButtonCheckTest_2");
+        pushButtonCheckTest_2->setGeometry(QRect(420, 340, 150, 40));
         MainWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MainWindow);
         menubar->setObjectName("menubar");
@@ -126,8 +133,11 @@ public:
         MainWindow->setWindowTitle(QCoreApplication::translate("MainWindow", "MainWindow", nullptr));
         lineEditUsername->setPlaceholderText(QString());
         comboBoxDiscipline->setItemText(0, QCoreApplication::translate("MainWindow", "Bioqu\303\255mica", nullptr));
-        comboBoxDiscipline->setItemText(1, QCoreApplication::translate("MainWindow", "F\303\255sico-qu\303\255mica", nullptr));
-        comboBoxDiscipline->setItemText(2, QCoreApplication::translate("MainWindow", "Qu\303\255mica Geral", nullptr));
+        comboBoxDiscipline->setItemText(1, QCoreApplication::translate("MainWindow", "Controle de Qualidade de Mat\303\251rias-primas", nullptr));
+        comboBoxDiscipline->setItemText(2, QCoreApplication::translate("MainWindow", "F\303\255sico-qu\303\255mica", nullptr));
+        comboBoxDiscipline->setItemText(3, QCoreApplication::translate("MainWindow", "Qu\303\255mica Geral", nullptr));
+        comboBoxDiscipline->setItemText(4, QCoreApplication::translate("MainWindow", "Tecnologia de Frutas e Hortali\303\247as", nullptr));
+        comboBoxDiscipline->setItemText(5, QCoreApplication::translate("MainWindow", "Tecnologia de Processamento de Alimento", nullptr));
 
         comboBoxDiscipline->setCurrentText(QCoreApplication::translate("MainWindow", "Bioqu\303\255mica", nullptr));
         label->setText(QCoreApplication::translate("MainWindow", "1\302\272 Bimestre", nullptr));
@@ -141,10 +151,11 @@ public:
         lineEdit_n2First->setPlaceholderText(QString());
         label_2->setText(QCoreApplication::translate("MainWindow", "Nota 1", nullptr));
         label_3->setText(QCoreApplication::translate("MainWindow", "2\302\272 Bimestre", nullptr));
-        pushButtonPrint->setText(QCoreApplication::translate("MainWindow", "Imprimir Notas", nullptr));
+        pushButtonPrint->setText(QCoreApplication::translate("MainWindow", "Exportar  Notas", nullptr));
         pushButtonAddStudent->setText(QCoreApplication::translate("MainWindow", "Cadastrar  Aluno", nullptr));
         label_4->setText(QCoreApplication::translate("MainWindow", "Nota 2", nullptr));
-        pushButtonCheckTest->setText(QCoreApplication::translate("MainWindow", "Inserir  Substutiva", nullptr));
+        pushButtonCheckTest->setText(QCoreApplication::translate("MainWindow", "Inserir  Substutiva 1B", nullptr));
+        pushButtonCheckTest_2->setText(QCoreApplication::translate("MainWindow", "Inserir  Substutiva 2B", nullptr));
     } // retranslateUi
 
 };
