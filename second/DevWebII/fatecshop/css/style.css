@@ -14,7 +14,7 @@ body {
 
 header {
     text-align: center;
-    padding: 20px;
+    padding: 10px;
     font-size: 24px;
     color: #1a1919;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -67,13 +67,17 @@ li:hover {
     background-color: #3700b3;
     transform: scale(1.02);
 }
+li a{
+    text-decoration: none;
+    color: white;
+}
 
 form {
     background-color: #fff;
     border: 1px solid #ddd;
     border-radius: 15px;
     padding: 30px;
-    width: 100%;
+    width: auto;
     max-width: 600px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease;
@@ -94,9 +98,8 @@ label {
     display: block;
     margin-bottom: 5px;
 }
-
-input[type="text"], 
-input[type="number"], 
+ 
+input, 
 textarea, 
 select {
     width: 100%;
@@ -108,7 +111,7 @@ select {
     transition: border-color 0.3s ease;
 }
 
-input:focus, 
+input:focus,    
 textarea:focus, 
 select:focus {
     border-color: #6200ea;
@@ -150,6 +153,58 @@ footer {
     bottom: 0;
 }
 
+/* Estilo da Tabela */
+table {
+    width: 100%;
+    max-width: 800px;
+    border-collapse: collapse;
+    margin: 20px auto;
+    background-color: #fff;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+th, td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+th {
+    background-color: #6200ea;
+    color: white;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+tr:hover {
+    background-color: rgba(98, 0, 234, 0.1);
+}
+
+td {
+    font-size: 15px;
+    color: #333;
+}
+
+td a {
+    color: #6200ea;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+td a:hover {
+    color: #3700b3;
+}
+
 /* CSS Responsivo */
 @media (max-width: 768px) {
     form, ul {
@@ -180,6 +235,15 @@ footer {
         padding: 10px;
         font-size: 14px;
     }
+
+    table {
+        max-width: 100%;
+        font-size: 12px;
+    }
+
+    th, td {
+        padding: 10px;
+    }
 }
 
 @media (max-width: 480px) {
@@ -207,5 +271,13 @@ footer {
     button {
         padding: 8px;
         font-size: 12px;
+    }
+
+    table {
+        font-size: 10px;
+    }
+
+    th, td {
+        padding: 8px;
     }
 }

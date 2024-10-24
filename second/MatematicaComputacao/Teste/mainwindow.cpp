@@ -165,10 +165,8 @@ void MainWindow::on_pushButtonPrint_clicked() {
         QTextStream stream(&file);
 
         // Cabeçalho do CSV
-        stream << "Nome do Aluno" << "," << "Disciplina" << "," << "N1 1 Bimestre" << ","
-               << "N2 1 Bimestre" << "," << "Media 1 Bimestre" << ","
-               << "N1 2 Bimestre" << "," << "N2 2 Bimestre" << ","
-               << "Media 2 Bimestre" << "," << "Media Semestral" << "," << "Situação" << "\n";
+        stream << "Nome do Aluno" << "," << "Disciplina" << "," << "N1" << ","
+               << "N2" << "," << "Media Semestral" << "," << "Situação" << "\n";
 
         // Itera sobre a lista de estudantes
         Student* current = head;
@@ -195,8 +193,7 @@ void MainWindow::on_pushButtonPrint_clicked() {
             QString situacao = (mediaFinal >= 6) ? "Aprovado" : "Reprovado";
 
             // Escreve a linha do aluno no arquivo CSV
-            stream << current->nomeAluno << "," << current->nomeDisciplina << ","
-                   << current->notaN1P << "," << current->notaN2P << "," << mediaP << ","
+            stream << current->nomeAluno << "," << current->nomeDisciplina << "," << mediaP << ","
                    << current->notaN1S << "," << current->notaN2S << "," << mediaS << ","
                    << mediaFinal << "," << situacao << "\n";
 
