@@ -1,10 +1,6 @@
 <?php 
-    session_start();
-
-    // verificando a variavel de sessão para o administrador está configurada, caso não esteja configurada, redirecionamos o usuário para a página de login
-    if(!isset($_SESSION["admin"])){
-        header("Location: http://localhost:3030/adm/login.php");
-    }
+include "functions.php";
+    autenticar();
 
 ?>
 <!DOCTYPE html>
@@ -22,7 +18,7 @@
         
         <ul>
             <li>Cadastrar Produtos</li>
-            <form action="form_product.php" method="$_POST">
+            <form action="cadastrar_produto.php" method="POST">
                 <div>
                     <label for="nameProduct">Nome do Produto</label>
                     <input type="text" name="nameProduct" maxlength="50" require>
@@ -37,13 +33,23 @@
                 </div>
                 <div>
                     <label for="typeProduct">Tipo do Produto</label>
-                    <select name="typeProduct" id="typeProduct"></select>
+                    <select name="typeProduct" id="typeProduct" require>
+                        <option value="" disabled selected>Selecione um Tipo de Produto<option>
+                            
+                        <option>CD</option>
+                        <option>Livro</option>
+                        <option>Game</option>
+                        <option>Informática</option>
+                        <option>DVD</option>
+                        <option>Mídia Digital</option>
+                        <option>Gift Card</option>
+                    </select>
                 </div>
                 <div>
                     <button>Cadastrar Produto</button>
                 </div>
             </form>
-            <li><a href="">Listar produtos cadastros</a></li>
+            <li><a href="listar_produtos.php">Listar produtos cadastros</a></li>
         </ul>
     </main>
     <footer></footer>
