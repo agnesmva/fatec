@@ -50,9 +50,6 @@ $resultado = $comando->fetchAll(); //executamos o comando "pegando tudo", FETCHA
                 <?php } ?>
             </tbody>
         </table>
-        <div>
-        <!-- <?= var_dump($produto);?> -->
-        </div>
     </main>
     <footer></footer>
 </body>
