@@ -59,21 +59,29 @@ class ProdutoFactory:
             return Alimento(*args)
         else:
             raise ValueError("Tipo de produto desconhecido")
+        
 
 
+
+#Como os parametros passados variam de cada produto, diferente da atividade anterior, que tinha "Documento" e "Nome" como parametros. Nessa é necessário colocar uma lista com o que precisa ser criado
+
+#também poderia passar o máximo de parametros e colocar eles como NULL nos produtos que não fazem uso, mas achei a lista mais prática
+
+
+#instanciando os objs
 factory = ProdutoFactory()
 
 
-vetor_eletronico = ["Smartphone", 2000.0, "123456789"]
-eletronico = factory.criarProduto("Eletronico", *vetor_eletronico)
+eletronico = ["Smartphone", 2000.0, "123456789"]
+eletronico = factory.criarProduto("Eletronico", *eletronico)
 eletronico.exibir_informacoes()
 
 
-vetor_roupa = ["Camiseta", 50.0, 'M', "Azul"]
-roupa = factory.criarProduto("Roupa", *vetor_roupa)
+roupa = ["Camiseta", 50.0, 'M', "Azul"]
+roupa = factory.criarProduto("Roupa", *roupa)
 roupa.exibir_informacoes()
 
 
-vetor_alimento = ["Arroz", 10.0, datetime(2025, 2, 24)]
-alimento = factory.criarProduto("Alimento", *vetor_alimento)
+alimento = ["Arroz", 10.0, datetime(2025, 2, 24)]
+alimento = factory.criarProduto("Alimento", *alimento)
 alimento.exibir_informacoes()
