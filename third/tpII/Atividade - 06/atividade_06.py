@@ -60,20 +60,20 @@ class ProdutoFactory:
         else:
             raise ValueError("Tipo de produto desconhecido")
 
-# Exemplo de uso:
+
 factory = ProdutoFactory()
 
-# Criando um eletrônico com vetor de parâmetros
+
 vetor_eletronico = ["Smartphone", 2000.0, "123456789"]
 eletronico = factory.criarProduto("Eletronico", *vetor_eletronico)
 eletronico.exibir_informacoes()
 
-# Criando uma roupa com vetor de parâmetros
+
 vetor_roupa = ["Camiseta", 50.0, 'M', "Azul"]
 roupa = factory.criarProduto("Roupa", *vetor_roupa)
 roupa.exibir_informacoes()
 
-# Criando um alimento com vetor de parâmetros
+
 vetor_alimento = ["Arroz", 10.0, datetime(2025, 2, 24)]
 alimento = factory.criarProduto("Alimento", *vetor_alimento)
 alimento.exibir_informacoes()
