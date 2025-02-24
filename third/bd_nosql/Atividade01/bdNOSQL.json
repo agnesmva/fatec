@@ -1,0 +1,142 @@
+[
+    {
+      "_id": "65d8f1c1a123456789012345",
+      "nome": "Centro de Filosofia e Ciência Humanas",
+      "sala": "004",
+      "bloco": "Bloco - 1",
+      "funcionarios": [
+        {
+          "_id": "65d8f1c2b123456789012345",
+          "nome": "Karl Marx",
+          "cpf": "12345678901",
+          "data_nasc": "1818-05-05",
+          "cidade": "Trier",
+          "estado": "Alemanha",
+          "logradouro": "Brückenstraße, 10"
+        },
+        {
+          "_id": "65d8f1c3c123456789012345",
+          "nome": "Max Weber",
+          "cpf": "12345678902",
+          "data_nasc": "1864-04-21",
+          "cidade": "Erfurt",
+          "estado": "Alemanha",
+          "logradouro": "Michaelisstraße, 36"
+        },
+        {
+          "_id": "65d8f1c4d123456789012345",
+          "nome": "Durkheim",
+          "cpf": "12345678903",
+          "data_nasc": "1858-04-15",
+          "cidade": "Épinal",
+          "estado": "França",
+          "logradouro": "Rue du Petit-Pot-de-Terre, 3"
+        }
+      ]
+    },
+    {
+      "_id": "65d8f1c5e123456789012345",
+      "nome": "Centro de Artes e Comunicação",
+      "sala": "876",
+      "bloco": "Bloco - 9",
+      "funcionarios": [
+        {
+          "_id": "65d8f1c6f123456789012345",
+          "nome": "Oscar Niemeyer",
+          "cpf": "12345678909",
+          "data_nasc": "1907-12-15",
+          "cidade": "Rio de Janeiro",
+          "estado": "Brasil",
+          "logradouro": "Ladeira de Nossa Senhora, 98"
+        }
+      ]
+    },
+    {
+      "_id": "65d8f1c7a123456789012345",
+      "nome": "Centro de Ciências Biológicas",
+      "sala": "45",
+      "bloco": "Bloco - 10",
+      "funcionarios": [
+        {
+          "_id": "65d8f1c8b123456789012345",
+          "nome": "Charles Darwin",
+          "cpf": "12345678905",
+          "data_nasc": "1809-02-12",
+          "cidade": "The Mount",
+          "estado": "Reino Unido",
+          "logradouro": "Shrewsbury, Inglaterra"
+        },
+        {
+          "_id": "65d8f1c9c123456789012345",
+          "nome": "Gregor Mendel",
+          "cpf": "12345678906",
+          "data_nasc": "1822-07-20",
+          "cidade": "Hynčice",
+          "estado": "Áustria",
+          "logradouro": "Mendel Square, 1"
+        }
+      ]
+    },
+    {
+      "_id": "65d8f1cad123456789012345",
+      "nome": "Centro de Ciências da Saúde",
+      "sala": "566",
+      "bloco": "Bloco - 69",
+      "funcionarios": [
+        {
+          "_id": "65d8f1cbe123456789012345",
+          "nome": "Sigmund Freud",
+          "cpf": "12345678904",
+          "data_nasc": "1856-05-06",
+          "cidade": "Freiberg",
+          "estado": "Áustria",
+          "logradouro": "Schlossergasse, 117"
+        }
+      ]
+    },
+    {
+      "_id": "65d8f1ccf123456789012345",
+      "nome": "Centro de Informática",
+      "sala": "666",
+      "bloco": "Bloco - 0101",
+      "funcionarios": [
+        {
+          "_id": "65d8f1cda123456789012345",
+          "nome": "Alan Turing",
+          "cpf": "12345678907",
+          "data_nasc": "1912-06-23",
+          "cidade": "Paddington",
+          "estado": "Reino Unido",
+          "logradouro": "Maida Vale, Londres"
+        },
+        {
+          "_id": "65d8f1ceb123456789012345",
+          "nome": "Ada Lovelace",
+          "cpf": "12345678908",
+          "data_nasc": "1815-12-10",
+          "cidade": "Londres",
+          "estado": "Reino Unido",
+          "logradouro": "Piccadilly Terrace, Londres"
+        },
+        {
+          "_id": "65d8f1cfc123456789012345",
+          "nome": "Dennis Ritchie",
+          "cpf": "12345678911",
+          "data_nasc": "1941-09-09",
+          "cidade": "Bronxville",
+          "estado": "Nova Iorque",
+          "logradouro": "White Plains, Nova Iorque"
+        },
+        {
+          "_id": "65d8f1d0d123456789012345",
+          "nome": "Linus Torvalds",
+          "cpf": "12345678912",
+          "data_nasc": "1969-12-28",
+          "cidade": "Helsínquia",
+          "estado": "Uusimaa",
+          "logradouro": "Helsínquia, Finlândia"
+        }
+      ]
+    }
+  ]
+  
