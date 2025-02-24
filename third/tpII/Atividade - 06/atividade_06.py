@@ -82,6 +82,12 @@ roupa = factory.criarProduto("Roupa", *roupa)
 roupa.exibir_informacoes()
 
 
-alimento = ["Arroz", 10.0, datetime(2025, 2, 24)]
+alimento = ["Iogurte", 10.0, datetime(2025, 6, 24)]
 alimento = factory.criarProduto("Alimento", *alimento)
 alimento.exibir_informacoes()
+
+"""
+desconhecido = ["QualquerCoisa", 30, datetime(2025, 3, 25)]
+desconhecido = factory.criarProduto("Qualquer cois", *desconhecido)
+desconhecido.exibir_informacoes()
+"""
