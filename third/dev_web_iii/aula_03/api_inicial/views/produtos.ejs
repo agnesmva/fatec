@@ -1,0 +1,7 @@
+<h1>Produtos à venda</h1>
+
+<ul>
+    <% produtos.forEach((um_produto) => { %>
+        <li><%= um_produto.nome %> - <%= um_produto.preco %></li>
+    <% }); %>
+</ul>

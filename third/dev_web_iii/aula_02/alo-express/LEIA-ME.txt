@@ -1,0 +1,8 @@
+MENSAGEM DO PROF. QUERINO!!!
+
+Este pacote não contém os módulos do express!!!
+
+Antes de executar o programa, baixe novamente os módulos pelo
+terminal/shell/cmd. Entre na pasta do projeto de digite:
+
+npm install
