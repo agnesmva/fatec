@@ -11,7 +11,7 @@ app.get("/", (req, res) => {
 
 app.get("/api/alunos", (req, res) => {
 
-    //res.send("Aqui você está fazendo um GET no recurso alunos");
+    res.send("Aqui você está fazendo um GET no recurso alunos");
     res.json(
         {
             "ra": 10002,
