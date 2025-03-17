@@ -11,7 +11,7 @@ a ordem dos parametros não podem ser mudada;
 Quando um usuário acessar a rota "/", a API responderá com "Acessando a API"
 */
 app.get("/", (req, res) => {
-    res.send("Acessando a API");
+    res.send("Acessando a API em /api/produtos");
 });
 
 // Inicializando o servidor e ouvindo na porta especificada
