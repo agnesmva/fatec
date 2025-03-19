@@ -1,0 +1,13 @@
+ Aluna: Agnes Maria Varela
+ Disciplina: Banco de Dados Não Relacional
+ Prof: Querino
+
+ 1. Descubra quantos filmes realizados entre 1980 e 1989 estão no cadastro.
+
+ 2. db.movies.find({ directors: {Steven Spielberg} })
+
+ 3. db.movies.find({ actors: "Harisson Ford"}, {"title":1, "runtime": 1})
+
+ 4.
+
+ db.restaurants.find({}, {"restaurant_id":1, "name":1,"borough":1, "cuisine":1}).pretty()
