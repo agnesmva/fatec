@@ -2,12 +2,69 @@
  Disciplina: Banco de Dados Não Relacional
  Prof: Querino
 
- 1. Descubra quantos filmes realizados entre 1980 e 1989 estão no cadastro.
+ 1. db.collection.find({ year: { $gte: 1980, $lte: 1989 } }).count()
 
  2. db.movies.find({ directors: {Steven Spielberg} })
 
- 3. db.movies.find({ actors: "Harisson Ford"}, {"title":1, "runtime": 1})
+ 3. db.movies.find( { cast: "Harrison Ford" }, { title: 1, runtime: 1, _id: 0 });
 
- 4.
+ 4. db.movies.find(
+    { "released": { $gte: ISODate("2000-01-01T00:00:00Z"), $lt: ISODate("2001-01-01T00:00:00Z") } }, { title: 1, released: 1, _id: 0 }); 
+    
+   //precisa usar ISODate caso contrário não funciona, o mongo não puxa a data feito em year
+
+ 5. db.movies.find( { "tomatoes.critic.rating": 10.0 },{ title: 1, _id: 0 });
+ 
+ 6.db.movies.find( { "awards.wins": { $gte: 5 } }, { title: 1, year: 1, "awards.wins": 1, _id: 0 })
+ 
+ 7.db.movies.find( { languages: "Dutch" }, { title: 1, plot: 1, _id: 0 });
+ 
+ 8. db.movies.find( { "imdb.rating": { $gt: 7.0, $lt: 9.0 } }, { title: 1, year: 1, "imdb.rating": 1, _id: 0 });
+ 
+ 9. db.movies.find( { countries: "Brazil" }, { title: 1, directors: 1, _id: 0 });
+ 
+ 10. Inclusao
+ 	db.movies.insertMany([
+    {
+        title: "Anora",
+        year: 2023,
+        plot: "A young stripper who marries the son of a Russian oligarch",
+        genres: ["Comedy", "Romantic"],
+        cast: ["Mikey Madison", "Yura Boriv", "Luna Sofía Miranda"],
+        directors: ["Sean S. Baker"]
+    },
+    {
+        title: "I'm Still Here",
+        year: 2023,
+        plot: "Tells the story of Eunice Paiva, a woman living in Brazil during the military dictatorship, whose life is shattered when her husband, Rubens, a former politician critical of the regime, is abruptly taken away by authorities and never seen again",
+        genres: ["Drama"],
+        cast: ["Fernanda Torres", "Selton Melo", "Fernanda Montenegro"],
+        directors: ["Walter Salles"]
+    }
+]);
+
+11. Alteracao
+	db.movies.updateOne(
+    { title: "Anora" , year: "2023"}, 
+    { 
+        $set: { 
+            plot: "O filme que roubou o oscar da Demi Moore, mas o que esperar de uma academia... kkkkk", 
+            year: 2024 
+        }
+    }
+);
+
+
+12. Deletar
+	db.movies.deleteOne( { title: "Anora", year: 2024 });
+
+	
+
+
+ 	
+
+
+
+
 
  db.restaurants.find({}, {"restaurant_id":1, "name":1,"borough":1, "cuisine":1}).pretty()
