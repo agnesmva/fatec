@@ -6,11 +6,15 @@ class Inimigo:
         self.nivel = nivel
         self.vida = vida
 
+    # O método clone() é um "construtor alternativo". Diferente do __init__, que cria um novo objeto, 
+    # clone() copia um objeto já existente. A cópia pode ser shallow (mantém a mesma referência) 
+    # ou deep (cria uma nova referência na memória).
+
     def clone(self):
         return copy.deepcopy(self)
 
     def __str__(self):
-        return f"Tipo: {self.tipo} | Nível: {self.nivel} | Vida: {self.vida}"  # Agora retorna a string corretamente!
+        return f"Tipo: {self.tipo} | Nível: {self.nivel} | Vida: {self.vida}"  
 
 # Criando um protótipo de inimigo (Orc)
 orc_prototipo = Inimigo("Orc", 5, 100)
