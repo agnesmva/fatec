@@ -1,0 +1,254 @@
+Documentação do Projeto: Sistema de Construção de Hambúrgueres com Padrão Builder
+
+Introdução
+
+Este projeto tem como objetivo demonstrar a aplicação do padrão de projeto Builder na criação de hambúrgueres personalizados. O padrão Builder permite a separação da construção do objeto de sua representação, facilitando a adição de novos tipos de hambúrgueres e ingredientes sem modificar a estrutura principal do código.
+
+Estrutura do Projeto
+
+O projeto está dividido em diferentes módulos:
+
+Interface Builder: Define a estrutura básica para a criação de hambúrgueres.
+
+Classe Produto (Hamburger): Representa o hambúrguer e seus ingredientes.
+
+Builders Concretos: Implementações específicas de hambúrgueres, como ClassicHamburgerBuilder e CheeseburgerBuilder.
+
+Classe Director (Chef): Controla o processo de construção dos hambúrgueres.
+
+Interface de Usuário: Permite ao usuário escolher o tipo de hambúrguer desejado.
+
+Classes e Métodos
+
+1. Interface HamburgerBuilder
+
+Define os métodos necessários para criar um hambúrguer:
+
+class HamburgerBuilder:
+    def add_bun(self): pass
+    def add_patty(self): pass
+    def add_cheese(self): pass
+    def add_condiments(self): pass
+    def get_result(self): pass
+
+2. Classe Hamburger
+
+Armazena a lista de ingredientes e fornece uma representação textual do hambúrguer.
+
+class Hamburger:
+    def __init__(self):
+        self.ingredients = []
+    
+    def add_ingredient(self, ingredient):
+        self.ingredients.append(ingredient)
+    
+    def __str__(self):
+        return f"Hambúrguer com: {', '.join(self.ingredients)}"
+
+3. Builders Concretos
+
+Criam hambúrgueres específicos. Exemplo:
+
+class ClassicHamburgerBuilder(HamburgerBuilder):
+    def __init__(self):
+        self.hamburger = Hamburger()
+    
+    def add_bun(self):
+        self.hamburger.add_ingredient("Pão de hambúrguer")
+    
+    def add_patty(self):
+        self.hamburger.add_ingredient("Carne grelhada")
+    
+    def add_cheese(self):
+        self.hamburger.add_ingredient("Queijo cheddar")
+    
+    def add_condiments(self):
+        self.hamburger.add_ingredient("Alface, tomate, ketchup e maionese")
+    
+    def get_result(self):
+        return self.hamburger
+
+4. Classe Chef
+
+Gerencia a construção do hambúrguer:
+
+class Chef:
+    def __init__(self, builder: HamburgerBuilder):
+        self.builder = builder
+    
+    def make_hamburger(self):
+        self.builder.add_bun()
+        self.builder.add_patty()
+        self.builder.add_cheese()
+        self.builder.add_condiments()
+        return self.builder.get_result()
+
+5. Interface de Usuário
+
+Permite a seleção do hambúrguer via console:
+
+if __name__ == "__main__":
+    print("Escolha o tipo de hambúrguer:")
+    print("1. Clássico")
+    print("2. Cheeseburger")
+    choice = input("Digite o número da opção desejada: ")
+    
+    if choice == "1":
+        builder = ClassicHamburgerBuilder()
+    elif choice == "2":
+        builder = CheeseburgerBuilder()
+    else:
+        print("Opção inválida.")
+        exit()
+    
+    chef = Chef(builder)
+    hamburger = chef.make_hamburger()
+    print(f"\nSeu pedido está pronto: {hamburger}")
+
+Reflexão sobre o Padrão Builder
+
+O uso do padrão Builder neste projeto trouxe diversas vantagens:
+
+Organização do código: Separação clara entre a lógica de construção e a estrutura do objeto final.
+
+Facilidade de expansão: Novos tipos de hambúrgueres podem ser adicionados sem modificar a estrutura existente.
+
+Reutilização de código: Métodos comuns podem ser reaproveitados em diferentes builders.
+
+Melhorias Futuras
+
+Adicionar mais tipos de hambúrgueres (VeggieBurger, ChickenBurger, etc.).
+
+Permitir que o usuário escolha individualmente os ingredientes.
+
+Criar uma interface gráfica para tornar a experiência mais interativa.
+
+Este projeto é uma excelente prática para aplicar o padrão Builder em cenários do mundo real, garantindo modularidade e flexibilidade no desenvolvimento de software.
+
+Documentação do Projeto: Sistema de Construção de Hambúrgueres com Padrão Builder
+
+Introdução
+
+Este projeto tem como objetivo demonstrar a aplicação do padrão de projeto Builder na criação de hambúrgueres personalizados. O padrão Builder permite a separação da construção do objeto de sua representação, facilitando a adição de novos tipos de hambúrgueres e ingredientes sem modificar a estrutura principal do código.
+
+Estrutura do Projeto
+
+O projeto está dividido em diferentes módulos:
+
+Interface Builder: Define a estrutura básica para a criação de hambúrgueres.
+
+Classe Produto (Hamburger): Representa o hambúrguer e seus ingredientes.
+
+Builders Concretos: Implementações específicas de hambúrgueres, como ClassicHamburgerBuilder e CheeseburgerBuilder.
+
+Classe Director (Chef): Controla o processo de construção dos hambúrgueres.
+
+Interface de Usuário: Permite ao usuário escolher o tipo de hambúrguer desejado.
+
+Classes e Métodos
+
+1. Interface HamburgerBuilder
+
+Define os métodos necessários para criar um hambúrguer:
+
+class HamburgerBuilder:
+    def add_bun(self): pass
+    def add_patty(self): pass
+    def add_cheese(self): pass
+    def add_condiments(self): pass
+    def get_result(self): pass
+
+2. Classe Hamburger
+
+Armazena a lista de ingredientes e fornece uma representação textual do hambúrguer.
+
+class Hamburger:
+    def __init__(self):
+        self.ingredients = []
+    
+    def add_ingredient(self, ingredient):
+        self.ingredients.append(ingredient)
+    
+    def __str__(self):
+        return f"Hambúrguer com: {', '.join(self.ingredients)}"
+
+3. Builders Concretos
+
+Criam hambúrgueres específicos. Exemplo:
+
+class ClassicHamburgerBuilder(HamburgerBuilder):
+    def __init__(self):
+        self.hamburger = Hamburger()
+    
+    def add_bun(self):
+        self.hamburger.add_ingredient("Pão de hambúrguer")
+    
+    def add_patty(self):
+        self.hamburger.add_ingredient("Carne grelhada")
+    
+    def add_cheese(self):
+        self.hamburger.add_ingredient("Queijo cheddar")
+    
+    def add_condiments(self):
+        self.hamburger.add_ingredient("Alface, tomate, ketchup e maionese")
+    
+    def get_result(self):
+        return self.hamburger
+
+4. Classe Chef
+
+Gerencia a construção do hambúrguer:
+
+class Chef:
+    def __init__(self, builder: HamburgerBuilder):
+        self.builder = builder
+    
+    def make_hamburger(self):
+        self.builder.add_bun()
+        self.builder.add_patty()
+        self.builder.add_cheese()
+        self.builder.add_condiments()
+        return self.builder.get_result()
+
+5. Interface de Usuário
+
+Permite a seleção do hambúrguer via console:
+
+if __name__ == "__main__":
+    print("Escolha o tipo de hambúrguer:")
+    print("1. Clássico")
+    print("2. Cheeseburger")
+    choice = input("Digite o número da opção desejada: ")
+    
+    if choice == "1":
+        builder = ClassicHamburgerBuilder()
+    elif choice == "2":
+        builder = CheeseburgerBuilder()
+    else:
+        print("Opção inválida.")
+        exit()
+    
+    chef = Chef(builder)
+    hamburger = chef.make_hamburger()
+    print(f"\nSeu pedido está pronto: {hamburger}")
+
+Reflexão sobre o Padrão Builder
+
+O uso do padrão Builder neste projeto trouxe diversas vantagens:
+
+Organização do código: Separação clara entre a lógica de construção e a estrutura do objeto final.
+
+Facilidade de expansão: Novos tipos de hambúrgueres podem ser adicionados sem modificar a estrutura existente.
+
+Reutilização de código: Métodos comuns podem ser reaproveitados em diferentes builders.
+
+Melhorias Futuras
+
+Adicionar mais tipos de hambúrgueres (VeggieBurger, ChickenBurger, etc.).
+
+Permitir que o usuário escolha individualmente os ingredientes.
+
+Criar uma interface gráfica para tornar a experiência mais interativa.
+
+Este projeto é uma excelente prática para aplicar o padrão Builder em cenários do mundo real, garantindo modularidade e flexibilidade no desenvolvimento de software.
+
