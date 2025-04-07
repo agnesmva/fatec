@@ -1,0 +1,28 @@
+{
+  "name": "api_post",
+  "version": "1.0.0",
+  "description": "api like a social media",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/agnesmva/fatec.git#5f5167fc0b5be34ed2377b706a0bb0cef92aca45"
+  },
+  "keywords": [
+    "api",
+    "social",
+    "media"
+  ],
+  "author": "agnesmva",
+  "license": "GPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/agnesmva/fatec/issues"
+  },
+  "homepage": "https://github.com/agnesmva/fatec/tree/5f5167fc0b5be34ed2377b706a0bb0cef92aca45#readme",
+  "dependencies": {
+    "express": "^5.1.0",
+    "mongoose": "^8.13.1"
+  }
+}
