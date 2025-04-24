@@ -47,7 +47,6 @@ Este repositório reúne todos os projetos que desenvolvi ao longo da minha grad
 ## 📫 Contato
 
 - GitHub: [@agnesmva](https://github.com/agnesmva)
-- Email: [seu.email@exemplo.com](mailto:seu.email@exemplo.com)
 
 ---
 
@@ -100,4 +99,3 @@ This repository gathers all the projects I’ve developed during my undergraduat
 ## 📫 Contact
 
 - GitHub: [@agnesmva](https://github.com/agnesmva)
-- Email: [your.email@example.com](mailto:your.email@example.com)
