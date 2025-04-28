@@ -1,0 +1,35 @@
+{
+      "_id": "geradoPeloMongo",
+      "numPedido": "0001",
+      "data": "04-15-2024",
+      "valorTotal": 200.00,
+      "pagamento" : "pix",
+      "cliente": {
+                "cpf":"000.094.984-52",
+                "nome": "Agnes",
+                "endereco":{
+                    "rua": "Abobrinha",
+                    "bairro": "Nenhum,",
+                    "cep": 1234907
+                }
+
+            },
+        "produtos":[
+            {
+                "nome": "Disco de Vinil - BRAT",
+                "preco": 200.00,
+                "qtd": 1
+            },
+            {
+                "nome": "Bluray - Percy Jackson e o Ladrão de Raios",
+                "preco": 10.00,
+                "qtd": 3
+            },
+            {
+                "nome": "Pelúcia - Sylveon",
+                "preco": 500.00,
+                "qtd": 1
+            }
+        ]
+        
+}

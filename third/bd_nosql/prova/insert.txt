@@ -1,0 +1,7 @@
+db.autores.insertOne({nome: "Arthur C. Clarke", país: "Inglaterra", nascimento: "16/12/1917", vivo: false});
+
+
+redis
+SET conectado "true"
+EXPIRE conectado 300
+TTL conectado

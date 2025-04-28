@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Conversão de Moedas</title>
+  <style>
+  </style>
+</head>
+<body>
+
+  <div id="conversao">
+    <input type="text" id="valor">
+    <div class="linha" id="brlToUsd">Carregando BRL para USD...</div>
+    <div class="linha" id="usdToBrl">Carregando USD para BRL...</div>
+  </div>
+
+  <script>
+    /*
+    Fazer atividade de consumir API
+    */
+
+    const brlDiv = document.getElementById("brlToUsd");
+    const usdDiv = document.getElementById("usdToBrl");
+    
+
+    const apiBRL = "https://cdn.jsdelivr.net/npm/@fawazahmed0/currency-api@latest/v1/currencies/brl.json";
+    const apiUSD = "https://cdn.jsdelivr.net/npm/@fawazahmed0/currency-api@latest/v1/currencies/usd.json";
+
+    // BRL para USD
+    fetch(apiBRL).then(resposta => resposta.json()).then(dados => {
+        const taxa = dados.brl.usd;
+        brlDiv.innerText = `1 BRL = ${taxa.toFixed(4)} USD`;
+      })
+      .catch(erro => {
+        brlDiv.innerText = "Erro ao carregar taxa BRL para USD.";
+        console.log("Erro:", erro);
+      });
+
+    // USD para BRL
+    fetch(apiUSD).then(resposta => resposta.json()).then(dados => {
+        const taxa = dados.usd.brl;
+        usdDiv.innerText = `1 USD = ${taxa.toFixed(4)} BRL`;
+      })
+      .catch(erro => {
+        usdDiv.innerText = "Erro ao carregar taxa USD para BRL.";
+        console.log("Erro:", erro);
+      });
+  </script>
+
+</body>
+</html>
