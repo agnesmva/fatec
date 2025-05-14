@@ -1,0 +1,22 @@
+footer {
+  display: flex;
+  gap: 50px;
+  background-color: rgb(236, 235, 235);
+  color: black;
+  border-radius: 6px;
+}
+
+footer ul {
+  list-style-type: none;
+  display: flex;
+}
+
+footer img {
+  width: 60%;
+}
+
+address {
+  display: flex;
+  align-items: center;
+  gap: 35px;
+}
