@@ -1,0 +1,57 @@
+## sintaxe do uso de useState 
+const [Lista, setLista] = useState{[]};
+const [Lista, setLista] = useState{["Pagar contas", "Teste tarefa dois", "Tarefa três"]};
+
+
+se eu quero que o componente exiba 
+
+<Lista tarefa={ Lista } />
+sintaxe 
+componente = Lista
+propriedades = tarefa
+
+
+
+
+no componentente Lista 
+
+
+export default function Lista({ tarefas }){
+    return(
+        <>
+            <ul>
+                {
+                    tarefas.map(tarefa, indice) =>(
+                        <li key={indice}> {tarefa}</li>
+                    )
+                }
+            </ul>
+        </>
+    )
+}
+
+sempre que tiver um campo de formulário é necessário criar uma variável de estado que guarde o valor do que está sendo preenchido
+
+
+
+funcao para incluir a tarefa
+
+function incluirTarefa(tarefa){
+    setLista([...lista, tarefa]
+    )
+}
+
+... é um operarador de espalhamento
+
+caso não usasse o operador de espalhamento
+letras = [ 'A', 'B', 'C']
+setLetras(Letras, 'D')
+
+letras = [[ 'A', 'B', 'C'], ['D']]
+
+com o espalhamento
+letras = [ 'A', 'B', 'C']
+setLetras(Letras, 'D')
+letras = [ 'A', 'B', 'C', 'D']
+
+

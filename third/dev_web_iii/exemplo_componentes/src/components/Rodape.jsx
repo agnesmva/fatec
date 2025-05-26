@@ -1,14 +1,11 @@
 import '../styles/Rodape.css'
+import ListaDinamica from './ListaDinamica';
 
 export default function Rodape() {
     return (
         <>
             <footer>
-                <ul>
-                    <li><img src="https://img.icons8.com/color/48/000000/facebook.png" /></li>
-                    <li><img src="https://img.icons8.com/color/48/000000/twitter-squared.png" /></li>
-                    <li><img src="https://img.icons8.com/color/48/000000/instagram-new.png" /></li>
-                </ul>
+                <ListaDinamica opcoes={ ["Instagram", "Twitter", "Tiktok", "BlueSky"] } />
                 <address>
                     <div>
                         <p>Rua Castro Alves, 62</p>
