@@ -1,0 +1,11 @@
+O padrão Iterator é um dos padrões comportamentais do design de software e serve para fornecer uma maneira de acessar sequencialmente os elementos de um objeto agregado sem expor sua estrutura interna.
+
+Benefícios da sua utilização:
+
+    Encapsulamento: o cliente não precisa saber como a coleção está estruturada internamente.
+
+    Responsabilidade única: separa a lógica de iteração da lógica da coleção.
+
+    Flexibilidade: é possível criar diferentes tipos de iteração (como reversa, filtrada etc.) sem modificar a coleção.
+
+    Reutilização de código: o mesmo iterador pode ser usado para diferentes coleções compatíveis.

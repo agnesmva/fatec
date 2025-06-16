@@ -1,0 +1,7 @@
+Aplicação do Padrão Command – Controle de Mídia
+
+O padrão de projeto Command permite encapsular ações como objetos, possibilitando que comandos sejam armazenados, desfeitos e refeitos de forma simples e organizada.
+
+No exemplo do Controle de Mídia, foram criados três comandos concretos: Play, Pause e Stop. Cada comando manipula um reprodutor de mídia (Player) que representa o receptor das ações. O invocador (ControleMidia) é responsável por executar os comandos, armazená-los em histórico e permitir operações de desfazer e refazer.
+
+A separação entre comandos, receptor e invocador proporciona flexibilidade e escalabilidade ao sistema, facilitando a adição de novos comandos no futuro, como “Avançar faixa” ou “Repetir faixa”, sem alterar o código existente. Essa estrutura exemplifica perfeitamente os princípios de encapsulamento e desacoplamento promovidos pelo padrão Command.
